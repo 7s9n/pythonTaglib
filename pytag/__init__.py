@@ -31,6 +31,8 @@ if (__file_path / __lib).exists():
     TAGLIB_PATH = __file_path / __lib
 elif (__main_path  / __lib).exists():
     TAGLIB_PATH = __main_path / __lib
+elif (__main_path / 'lib' / __lib).exists():
+    TAGLIB_PATH = __main_path / 'lib' / __lib
 else:
     raise FileNotFoundError(
         """Cannot find "{}" in this search path: __file__ folder: {}"""
